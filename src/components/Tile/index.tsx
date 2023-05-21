@@ -1,23 +1,21 @@
-import { dragDrop, dragEnd, dragStart } from "../store";
-import { useAppDispatch } from "../store/hooks";
+import { dragDrop, dragEnd, dragStart } from '../../store'
+import { useAppDispatch } from '../../store/hooks'
 
 const Tile = ({ candy, candyId }: { candy: string; candyId: number }) => {
-
-  const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch()
 
   return (
-  
-		<div
-      className="h-24 w-24 flex justify-center items-center m-0.5 rounded-lg select-none"
+    <div
+      className='h-24 w-24 flex justify-center items-center m-0.5 rounded-lg select-none'
       style={{
-        boxShadow: "inset 5px 5px 15px #062525,inset -5px -5px 15px #aaaab7bb",
+        boxShadow: 'inset 5px 5px 15px #062525,inset -5px -5px 15px #aaaab7bb',
       }}
     >
       {candy && (
         <img
           src={candy}
-          alt=""
-          className="h-20 w-20"
+          alt=''
+          className='h-20 w-20'
           draggable={true}
           onDragStart={(e) => dispatch(dragStart(e.target))}
           onDragOver={(e) => e.preventDefault()}
@@ -29,7 +27,7 @@ const Tile = ({ candy, candyId }: { candy: string; candyId: number }) => {
         />
       )}
     </div>
-  );
+  )
 }
 
-export default Tile;
+export default Tile
