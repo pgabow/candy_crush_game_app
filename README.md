@@ -1,6 +1,6 @@
 ## Candy Crush Game - app using the React, TS, Redux toolkit, Tailwind
 
-See here - https://stupid-ai-johndoe-blog.vercel.app
+See here - https://candy-crush-game-app.vercel.app/
 
 ### Getting Started
 
